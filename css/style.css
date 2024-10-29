@@ -313,8 +313,13 @@ ul{
 }
 /*All prodcuts page*/
 .row-2{
-    justify-content: space-between;/*create some space heading and selection panel*/
+    justify-content: start;
+    gap: 10%;/*create some space heading and selection panel*/
     margin: 100px auto 50px;
+}
+.filters{
+    border-radius: 2%;
+    border: 1px solid black;
 }
 select{
     border: 1px solid #ff523b;/*create red border around dropdown select panel*/
@@ -421,7 +426,7 @@ td input{
 }
 td a{
     color: #ff523b;
-    ffont-size: 12px;
+    font-size: 12px;
 }
 td img{
     width: 80px;

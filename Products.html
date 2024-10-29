@@ -60,9 +60,24 @@
             <h2>All Products
 
             </h2>
-            <select>
-                <option>Default Sorting</option>
-                <option>Sort by Price</option>
+
+
+                <select id="categorySelect">
+                    <option value="all">All</option>
+                    <option value="t-shirt">T-shirts</option>
+                    <option value="Shoes">Shoes</option>
+                    <option value="pants">pants</option>
+                    <option value="sucks">sucks</option>
+                    <option value="watch">watches</option>
+
+                    <!-- Add more categories as needed -->
+                </select>
+
+
+
+            <select class="filters">
+                <option>Filters</option>
+                <option>Sort by Price (Lower to Higher)</option>
                 <option>Sort by Popularity</option>
                 <option>Sort by Sale</option>
             </select>
@@ -72,7 +87,7 @@
         <div class="row">
 
 
-            <div class="col-4">
+            <div class="col-4" data-category="t-shirt">
                 <img src="Images/product-1.jpg">
                 <h4>Red Printed T-shirt</h4>
                 <div class="rating">
@@ -82,12 +97,12 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
-                <p>$50.00</p>
+                <p>$29.99</p>
             </div>
 
-            <div class="col-4">
+            <div class="col-4" data-category="Shoes">
                 <img src="Images/product-2.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>sport shose</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -95,12 +110,12 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
-                <p>$50.00</p>
+                <p>$59.89</p>
             </div>
 
-            <div class="col-4">
+            <div class="col-4" data-category="pants">
                 <img src="Images/product-3.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>sport pants</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -108,12 +123,12 @@
                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
-                <p>$50.00</p>
+                <p>$35.00</p>
             </div>
 
-            <div class="col-4">
+            <div class="col-4" data-category="t-shirt">
                 <img src="Images/product-4.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>puma t-shirt</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -122,7 +137,7 @@
                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
 
                 </div>
-                <p>$50.00</p>
+                <p>$19.99</p>
             </div>
         </div>
 
@@ -130,9 +145,9 @@
 
         <div class="row">
 
-            <div class="col-4">
+            <div class="col-4" data-category="Shoes">
                 <img src="Images/product-5.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>Air-jordan</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -140,12 +155,12 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
-                <p>$50.00</p>
+                <p>$119.00</p>
             </div>
 
-            <div class="col-4">
+            <div class="col-4" data-category="t-shirt">
                 <img src="Images/product-6.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>puma soprt t-shirt</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -153,12 +168,12 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
-                <p>$50.00</p>
+                <p>$21.89</p>
             </div>
 
-            <div class="col-4">
+            <div class="col-4" data-category="sucks">
                 <img src="Images/product-7.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>high quality sucks</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -166,12 +181,12 @@
                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
-                <p>$50.00</p>
+                <p>$4.15</p>
             </div>
 
-            <div class="col-4">
+            <div class="col-4" data-category="watch">
                 <img src="Images/product-8.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>high quality watch</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -180,13 +195,13 @@
                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
 
                 </div>
-                <p>$50.00</p>
+                <p>$89.99</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-4">
+            <div class="col-4" data-category="watch">
                 <img src="Images/product-9.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>classic watch</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -194,12 +209,12 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
-                <p>$50.00</p>
+                <p>$69.00</p>
             </div>
 
-            <div class="col-4">
+            <div class="col-4" data-category="Shoes">
                 <img src="Images/product-10.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>black sport shose</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -207,12 +222,12 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
-                <p>$50.00</p>
+                <p>$68.89</p>
             </div>
 
-            <div class="col-4">
+            <div class="col-4" data-category="Shoes">
                 <img src="Images/product-11.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>medical shose</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -220,12 +235,12 @@
                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
-                <p>$50.00</p>
+                <p>$21.99</p>
             </div>
 
-            <div class="col-4">
+            <div class="col-4" data-category="pants">
                 <img src="Images/product-12.jpg">
-                <h4>Red Printed T-shirt</h4>
+                <h4>nike sport pants</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -234,7 +249,7 @@
                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
 
                 </div>
-                <p>$50.00</p>
+                <p>$29.99</p>
             </div>
         </div>
 
@@ -303,6 +318,29 @@
 
     <!-----------------JS----------------------->
 
+    
+    <script>
+        
+ 
+    const categorySelect = document.getElementById('categorySelect');
+    categorySelect.addEventListener('change', filterProducts);
+
+    function filterProducts() {
+        const selectedCategory = categorySelect.value;
+
+        document.querySelectorAll('.col-4').forEach((product) => {
+            const productCategory = product.getAttribute('data-category');
+            if (selectedCategory === 'all' || productCategory === selectedCategory) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    }
+;
+
+
+    </script>
 
 </body>
 
