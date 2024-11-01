@@ -527,9 +527,25 @@ form a{
 
 
 
+.products {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns /
+    grid-auto-flow: dense; / Fills in empty spaces when some items are hidden /
+    gap: 20px; / Optional: adjusts the spacing between items */
+}
 
 
 
+
+.slider-container{
+    display: flex;
+    flex-direction: row;
+    gap: 2vh;
+}
 
 
 
@@ -561,5 +577,8 @@ form a{
     .cart-info p{
         display:none;/*hide product name in smaller screen*/
     }
+
+
+   
 
 }

@@ -38,9 +38,10 @@
             </ul>
 
             <ul class="menu-bar">
-
-                <li>&#36;0.00</li>
-                <li><i class='fas fa-shopping-cart'></i></li>
+                <span>$</span>
+                <li id="cart-count" class="cart-count">0.00</li>
+                <li><i class='fas fa-shopping-cart'></i><span class="product-n" id="product-n">  0</span></li>
+                
 
             </ul>
 
@@ -81,14 +82,26 @@
                 <option>Sort by Popularity</option>
                 <option>Sort by Sale</option>
             </select>
+
+
+
+            <div class="slider-container">
+                <label for="pricerange">Select Price Range: </label>
+                <span id="value-display">150</span>
+                <input type="range" id="pricerange" name="pricerange" min="0" max="500" value="250" step="10" oninput="updatepricevalue(this.value)">
+            </div>
         </div>
 
 
-        <div class="row">
+
+        <div class="products">
 
 
             <div class="col-4" data-category="t-shirt">
-                <img src="Images/product-1.jpg">
+                <div class="imgbtn">
+                <img class="image" src="Images/product-1.jpg">
+                <button class="add-to-cart" onclick="addprice(29.99)">ADD TO CART</button>
+                </div>  
                 <h4>Red Printed T-shirt</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -101,8 +114,11 @@
             </div>
 
             <div class="col-4" data-category="Shoes">
-                <img src="Images/product-2.jpg">
-                <h4>sport shose</h4>
+                <div class="imgbtn">
+                    <img class="image" src="Images/product-2.jpg">
+                    <button class="add-to-cart" onclick="addprice(59.89)">ADD TO CART</button>
+                    </div>                  
+                    <h4>sport shose</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -114,8 +130,12 @@
             </div>
 
             <div class="col-4" data-category="pants">
-                <img src="Images/product-3.jpg">
-                <h4>sport pants</h4>
+
+                <div class="imgbtn">
+                    <img class="image" src="Images/product-3.jpg">
+                    <button class="add-to-cart" onclick="addprice(35.00)">ADD TO CART</button>
+                    </div>  
+                    <h4>sport pants</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -127,7 +147,10 @@
             </div>
 
             <div class="col-4" data-category="t-shirt">
-                <img src="Images/product-4.jpg">
+                <div class="imgbtn">
+                <img class="image" src="Images/product-4.jpg">
+                <button class="add-to-cart"onclick="addprice(19.99)">ADD TO CART</button>
+                </div>  
                 <h4>puma t-shirt</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -139,14 +162,14 @@
                 </div>
                 <p>$19.99</p>
             </div>
-        </div>
-
-
-
-        <div class="row">
+        <!-- </div> -->
+        <!-- <div class="row"> -->
 
             <div class="col-4" data-category="Shoes">
-                <img src="Images/product-5.jpg">
+                <div class="imgbtn">
+                <img class="image" src="Images/product-5.jpg">
+                <button class="add-to-cart" onclick="addprice(119.00)">ADD TO CART</button>
+                </div>  
                 <h4>Air-jordan</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -159,8 +182,11 @@
             </div>
 
             <div class="col-4" data-category="t-shirt">
-                <img src="Images/product-6.jpg">
-                <h4>puma soprt t-shirt</h4>
+                <div class="imgbtn">
+                    <img class="image" src="Images/product-6.jpg">
+                    <button class="add-to-cart" onclick="addprice(21.89)">ADD TO CART</button>
+                    </div>                 
+                    <h4>puma soprt t-shirt</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -172,8 +198,11 @@
             </div>
 
             <div class="col-4" data-category="sucks">
-                <img src="Images/product-7.jpg">
-                <h4>high quality sucks</h4>
+                <div class="imgbtn">
+                    <img class="image" src="Images/product-7.jpg">
+                    <button class="add-to-cart" onclick="addprice(4.15)">ADD TO CART</button>
+                    </div>                  
+                    <h4>high quality sucks</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -185,8 +214,11 @@
             </div>
 
             <div class="col-4" data-category="watch">
-                <img src="Images/product-8.jpg">
-                <h4>high quality watch</h4>
+                <div class="imgbtn">
+                    <img class="image" src="Images/product-8.jpg">
+                    <button class="add-to-cart" onclick="addprice(89.99)">ADD TO CART</button>
+                    </div>                  
+                    <h4>high quality watch</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -197,11 +229,14 @@
                 </div>
                 <p>$89.99</p>
             </div>
-        </div>
-        <div class="row">
+        <!-- </div> -->
+        <!-- <div class="row"> -->
             <div class="col-4" data-category="watch">
-                <img src="Images/product-9.jpg">
-                <h4>classic watch</h4>
+                <div class="imgbtn">
+                    <img class="image" src="Images/product-9.jpg">
+                    <button class="add-to-cart" onclick="addprice(69.00)">ADD TO CART</button>
+                    </div>
+                    <h4>classic watch</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -213,8 +248,11 @@
             </div>
 
             <div class="col-4" data-category="Shoes">
-                <img src="Images/product-10.jpg">
-                <h4>black sport shose</h4>
+                <div class="imgbtn">
+                    <img class="image" src="Images/product-10.jpg">
+                    <button class="add-to-cart" onclick="addprice(68.89)">ADD TO CART</button>
+                    </div>                  
+                    <h4>black sport shose</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -226,8 +264,11 @@
             </div>
 
             <div class="col-4" data-category="Shoes">
-                <img src="Images/product-11.jpg">
-                <h4>medical shose</h4>
+                <div class="imgbtn">
+                    <img class="image" src="Images/product-11.jpg">
+                    <button class="add-to-cart" onclick="addprice(21.99)">ADD TO CART</button>
+                    </div>                  
+                    <h4>medical shose</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -239,8 +280,11 @@
             </div>
 
             <div class="col-4" data-category="pants">
-                <img src="Images/product-12.jpg">
-                <h4>nike sport pants</h4>
+                <div class="imgbtn">
+                    <img class="image" src="Images/product-12.jpg">
+                    <button class="add-to-cart" onclick="addprice(39.99)">ADD TO CART</button>
+                    </div>                  
+                    <h4>nike sport pants</h4>
                 <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -319,28 +363,7 @@
     <!-----------------JS----------------------->
 
     
-    <script>
-        
- 
-    const categorySelect = document.getElementById('categorySelect');
-    categorySelect.addEventListener('change', filterProducts);
-
-    function filterProducts() {
-        const selectedCategory = categorySelect.value;
-
-        document.querySelectorAll('.col-4').forEach((product) => {
-            const productCategory = product.getAttribute('data-category');
-            if (selectedCategory === 'all' || productCategory === selectedCategory) {
-                product.style.display = 'block';
-            } else {
-                product.style.display = 'none';
-            }
-        });
-    }
-;
-
-
-    </script>
+    <script src="js/script.js"></script>
 
 </body>
 
